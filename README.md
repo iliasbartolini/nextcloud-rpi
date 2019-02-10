@@ -96,36 +96,41 @@ curl -sSL https://raw.githubusercontent.com/nextcloud/nextcloudpi/master/install
 ```
 Follow instructions
 
+```
 sudo apt-get remove samba --yes
 sudo apt-get remove nfs-kernel-server --yes
+```
 
+```
 sudo ncp-config 
-  '> CONFIG > nc-admin > generate new password
-  '> CONFIG > nc-passwd > generate new password
-  '> CONFIG > nc-webui > ACTIVE: no
-  '> CONFIG > nc-trusted-domains 
-    > nextcloud.iliasbartolini.name 
-    > nextcloud
-    > $IP_ADDR (static IP address)
+```
+* CONFIG > nc-admin > generate new password
+* CONFIG > nc-passwd > generate new password
+* CONFIG > nc-webui > ACTIVE: no
+* CONFIG > nc-trusted-domains 
+  * nextcloud.iliasbartolini.name 
+  * nextcloud
+  * $IP_ADDR (static IP address)
+```
 sudo systemctl reload apache2
+```
 
-Change email server:
+Change email server:  
 https://nextcloud.iliasbartolini.name/index.php/settings/admin
 
-Enable TOTP App (and disable all the unnecessary ones):
+Enable TOTP App (and disable all the unnecessary ones):  
 https://nextcloud.iliasbartolini.name/index.php/settings/apps/security
 
-Enable Default encryption module 
+Enable Default encryption module  
 https://nextcloud.iliasbartolini.name/index.php/settings/apps/security/encryption
 
-Enable Server-Side encryption
+Enable Server-Side encryption  
 https://nextcloud.iliasbartolini.name/index.php/settings/admin/security 
 
-
-Change pasword policy:
+Change pasword policy:  
 https://nextcloud.iliasbartolini.name/index.php/settings/admin/security
 
-Create users 
+Create users  
 https://nextcloud.iliasbartolini.name/index.php/settings/users
 
 
@@ -144,6 +149,6 @@ Verify and accept certificate:
 firefox 'https://nextcloud.iliasbartolini.name'
 ```
 
-Install clients from
+Install clients from  
 https://nextcloud.com/install/#install-clients
 
